@@ -1,0 +1,106 @@
+/* Contact Form CSS */
+/* Main container */
+.contact-form {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #f0e8a5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Form elements */
+.contact-form h2 {
+  font-family: "Lora", sans-serif;
+  font-size: 32px;
+  color: #3e5a20;
+  margin: 10px 0 20px;
+  position: relative;
+  text-align: center;
+}
+
+.contact-form h2:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #b9da95;
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Form inputs and labels */
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #3e5a20;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 0px solid #3e5a20;
+  border-radius: 5px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.contact-form button {
+  margin-top: 20px;
+  background-color: #3e5a20;
+  color: #ebe7d2;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #4d7028;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%;
+  }
+  
+  .contact-form textarea {
+    max-height: 150px;
+  }
+  
+  .contact-form h2 {
+    font-size: 28px;
+  }
+}
+
+/* Name fields container */
+.name-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.name-fields > div {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .name-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+}

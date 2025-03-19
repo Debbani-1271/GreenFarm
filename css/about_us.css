@@ -1,0 +1,395 @@
+/*About Us*/
+/* General Styles */
+body {
+  font-family: "Hind Madurai", sans-serif;
+  background-color: #edece6;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+.btn,
+.learn-more {
+  display: inline-block;
+  background-color: #f0e8a5;
+  color: #3e5a20;
+  padding: 11px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn:hover,
+.learn-more:hover {
+  background-color: #3e5a20;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Container - Controls the width of main content areas */
+.section-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Updated Section Heading Styles */
+.section-heading {
+  font-family: "Lora", sans-serif;
+  font-size: 32px;
+  color: #3e5a20;
+  margin: 0 0 30px;
+  position: relative;
+  text-align: left; /* Changed from center to left */
+}
+
+.section-heading:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #b9da95;
+  margin-top: 0.5rem;
+  position: relative; /* Changed from absolute */
+  left: 0; /* Changed from 50% */
+  transform: none; /* Removed translateX */
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #e1efd2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: "Lora", serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info a {
+  margin-left: 15px;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.8;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #3e5a20;
+  background: none;
+  border: none;
+  margin-left: 15px;
+}
+
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 0 50px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  font-family: "Hind Madurai", serif;
+  font-size: 18px;
+  color: #3e5a20;
+  font-weight: bold;
+  display: block;
+  padding: 15px 45px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 0px;
+}
+
+nav ul li a:hover {
+  background-color: #edece6;
+  color: #3e5a20;
+  text-decoration: underline;
+}
+
+nav ul li a.active {
+  background-color: #edece6;
+  color: #3e5a20;
+  text-decoration: underline;
+}
+
+/* Responsive styles for header and nav */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .contact-info a {
+    margin-left: 8px;
+    font-size: 16px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  nav ul.show {
+    height: auto;
+  }
+
+  nav ul li a {
+    padding: 12px 15px;
+  }
+}
+
+/* Hero/Banner Image */
+.hero {
+  text-align: center;
+  padding: 18px 0px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  font-size: 32px;
+  font-family: "Lora", serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 20px;
+    font-size: 26px;
+  }
+}
+
+/* Section Backgrounds */
+.story-section-wrapper {
+  background-color: #edece6;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.mission-section-wrapper {
+  background-color: #e1efd2;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.practices-section-wrapper {
+  background-color: #edece6;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* Content Sections */
+.story,
+.mission,
+.practices {
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Content Row Styling - Updated */
+.content-row {
+  display: flex;
+  align-items: flex-start; /* Changed from center to align from top */
+  gap: 40px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-image,
+.mission-image,
+.practices-image {
+  width: 45%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.story-image img,
+.mission-image img,
+.practices-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.story-text,
+.mission-text,
+.practices-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive styles for content sections */
+@media (max-width: 768px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .story-image,
+  .mission-image,
+  .practices-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .story-text,
+  .mission-text,
+  .practices-text {
+    width: 100%;
+  }
+
+  /* Responsive heading alignment for mobile */
+  .section-heading {
+    text-align: center;
+  }
+
+  .section-heading:after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #3e5a20;
+  color: white;
+  padding: 4rem 2rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  color: #e1efd2;
+}
+
+.footer-content > div {
+  flex: 1 1 200px;
+}
+
+.footer-content h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-content h3:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #b9da95;
+  margin-top: 0.5rem;
+}
+
+.social-media a:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer responsive styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-content > div {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-content h3:after {
+    margin: 0.5rem auto 0;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+}
