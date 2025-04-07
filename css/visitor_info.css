@@ -242,38 +242,20 @@ nav ul li a.active {
   width: 100%;
   box-sizing: border-box;
 }
-
 .rules-container {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  flex-direction: row-reverse;
   width: 100%;
   box-sizing: border-box;
-}
-
-.rules-image {
-  width: 100%;
-  max-width: 380px;
-  height: 330px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.rules-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center top;
 }
 
 .rules-list {
   flex: 1;
   column-count: 2;
-  column-gap: 0px;
+  column-gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-
 .rules-list ul {
   list-style: none;
   padding-left: 0;
@@ -281,14 +263,12 @@ nav ul li a.active {
   margin: 0;
   counter-reset: list-counter;
 }
-
 .rules-list ul li {
   display: flex;
   align-items: center;
   break-inside: avoid;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
-
 /* Numbered Circle Design */
 .rules-list ul li::before {
   content: counter(list-counter);
@@ -296,8 +276,8 @@ nav ul li a.active {
   background-color: #ffffff;
   color: #3e5a20;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,25 +287,15 @@ nav ul li a.active {
   flex-shrink: 0;
   box-sizing: border-box;
 }
-
 /* Rules section responsive styles */
 @media (max-width: 768px) {
   .rules-container {
-    flex-direction: column-reverse;
     padding: 0 20px;
   }
-
-  .rules-image {
-    margin: 0px auto 0;
-    max-width: 580px;
-    height: 440px;
-  }
-
   .rules-list {
     column-count: 1;
     width: 100%;
   }
-
   .rules-list ul li {
     margin-bottom: 20px;
   }
@@ -480,7 +450,7 @@ nav ul li a.active {
 }
 
 .note {
-  background-color: #e1efd2;
+  background-color: #f7f3d2;
   padding: 20px;
   text-align: center;
   font-size: 18px;
