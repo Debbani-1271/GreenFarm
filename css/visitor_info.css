@@ -273,8 +273,8 @@ nav ul li a.active {
 .rules-list ul li::before {
   content: counter(list-counter);
   counter-increment: list-counter;
-  background-color: #ffffff;
-  color: #3e5a20;
+  background-color: #3e5a20;
+  color: White;
   border-radius: 50%;
   width: 70px;
   height: 70px;
